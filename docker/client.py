@@ -517,7 +517,8 @@ class Client(requests.Session):
         req_data = {
             'username': username,
             'password': password,
-            'email': email
+            'email': email,
+            'serveraddress': registry,
         }
         res = self._result(self._post_json(url, data=req_data), True)
         if res['Status'] == 'Login Succeeded':
